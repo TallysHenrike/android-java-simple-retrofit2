@@ -6,6 +6,7 @@ public class Users {
     protected String name;
     protected String username;
     protected String email;
+    protected Address address;
     protected String phone;
     protected String website;
 
@@ -51,6 +52,10 @@ public class Users {
     public void setEmail(String email) {
         this.email = email;
     }
+
+    public Address getAddress() { return address; }
+
+    public void setAddress(Address address) { this.address = address; }
 
     public String getPhone() {
         return phone;
