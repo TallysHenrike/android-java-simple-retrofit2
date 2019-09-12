@@ -21,9 +21,7 @@ public class Address {
         this.street = street;
     }
 
-    public String getSuite() {
-        return suite;
-    }
+    public String getSuite() { return suite; }
 
     public void setSuite(String suite) {
         this.suite = suite;
