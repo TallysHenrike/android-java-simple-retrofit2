@@ -5,12 +5,14 @@ public class Address {
     protected String suite;
     protected String city;
     protected String zipcode;
+    protected Geo geo;
 
-    public Address(String street, String suite, String city, String zipcode) {
-        this.street = street;
-        this.suite = suite;
-        this.city = city;
-        this.zipcode = zipcode;
+    public Address(String street, String suite, String city, String zipcode, Geo geo) {
+        this.setStreet(street);
+        this.setSuite(suite);
+        this.setCity(city);
+        this.setZipcode(zipcode);
+        this.setGeo(geo);
     }
 
     public String getStreet() {
@@ -42,4 +44,8 @@ public class Address {
     public void setZipcode(String zipcode) {
         this.zipcode = zipcode;
     }
+
+    public Geo getGeo() { return geo; }
+
+    public void setGeo(Geo geo) { this.geo = geo; }
 }

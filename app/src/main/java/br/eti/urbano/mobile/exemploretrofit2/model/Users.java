@@ -9,16 +9,18 @@ public class Users {
     protected Address address;
     protected String phone;
     protected String website;
+    protected Company company;
 
     public Users() { }
 
-    public Users(Integer id, String name, String username, String email, String phone, String website) {
-        this.id = id;
-        this.name = name;
-        this.username = username;
-        this.email = email;
-        this.phone = phone;
-        this.website = website;
+    public Users(Integer id, String name, String username, String email, String phone, String website, Company company) {
+        this.setId(id);
+        this.setName(name);
+        this.setUsername(username);
+        this.setEmail(email);
+        this.setPhone(phone);
+        this.setWebsite(website);
+        this.setCompany(company);
     }
 
     public Integer getId() {
@@ -73,15 +75,23 @@ public class Users {
         this.website = website;
     }
 
+    public Company getCompany() {
+        return company;
+    }
+
+    public void setCompany(Company company) {
+        this.company = company;
+    }
+
     @Override
     public String toString() {
         return "{" +
-            "id:" + id + ", " +
-            "name:" + name + ", " +
-            "username:" + username + ", " +
-            "email:" + email + ", " +
-            "phone:" + phone + ", " +
-            "website:" + website + " " +
-        "}";
+                "id:" + getId() + ", " +
+                "name:" + getName() + ", " +
+                "username:" + getUsername() + ", " +
+                "email:" + getEmail() + ", " +
+                "phone:" + getPhone() + ", " +
+                "website:" + getWebsite() + " " +
+                "}";
     }
 }
